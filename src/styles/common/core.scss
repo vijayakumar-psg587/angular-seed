@@ -1,0 +1,28 @@
+$height-content-init: 90%;
+
+@mixin header-footer-div(
+  $widthVal: 100%,
+  $headerFlag,
+  $header_heightVal: 20%,
+  $footer_heightVal: 10%) {
+  width: $widthVal;
+  @if $headerFlag == 'false' {
+    position: fixed;
+    left:0;
+    bottom: 0;
+  }
+  @else {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+}
+
+@mixin content-init-body {
+  height: $height-content-init;
+}
+
+@mixin inherit-data {
+  width:inherit;
+  height: $height-content-init;
+}
